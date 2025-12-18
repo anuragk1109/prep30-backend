@@ -8,7 +8,7 @@ const app = express();
 app.use(cors({
   origin: [
     'http://localhost:3000',  // Next.js dev server
-    'https://prep30-frontend.vercel.app/' // Production frontend
+    'https://prep30-frontend.vercel.app' // Production frontend
   ],
   credentials: true,
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
