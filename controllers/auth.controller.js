@@ -117,7 +117,13 @@ exports.login = async (req, res) => {
         name: user.name,
         email: user.email,
         mobile: user.mobile,
-        role: user.role
+        role: user.role,
+        subscription: {
+          status: user.subscription?.status || "inactive",
+          plan: user.subscription?.plan || null,
+          currentPeriodEnd: user.subscription?.currentPeriodEnd || null,
+          cancelAtPeriodEnd: user.subscription?.cancelAtPeriodEnd || false
+        }
       }
     });
   } catch (error) {
