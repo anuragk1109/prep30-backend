@@ -14,7 +14,7 @@ exports.getAllCourses = async (req, res) => {
     res.json({
       message: "Courses retrieved successfully",
       count: courses.length,
-      data: courses
+      data: courses || []
     });
   } catch (error) {
     res.status(500).json({ error: "Failed to retrieve courses" });
