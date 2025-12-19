@@ -57,7 +57,7 @@ subscription: {
 status: {
 type: String,
 enum: ["inactive", "active", "past_due", "canceled", "trial"],
-default: "active",
+default: "inactive",
 index: true
 },
 plan: {
